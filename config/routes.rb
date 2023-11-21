@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  get "tasks", to: "tasks#index"
+  get "tasks/new", to: "tasks#new"
+  post "tasks", to: "tasks#create"
+  get "tasks", to: "tasks#index", as: "all_tasks"
   get "tasks/:id", to: "tasks#show"
 end
