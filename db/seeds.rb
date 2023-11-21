@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+
+# Generate 30 fake tasks
+30.times do
+  Task.create(
+    title: "#{Faker::Verb.base} #{Faker::Hacker.ingverb} #{Faker::Hacker.noun}",
+    details: Faker::Lorem.paragraph,
+    completed: [true, false].sample
+  )
+end
